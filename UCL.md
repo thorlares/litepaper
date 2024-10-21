@@ -12,7 +12,7 @@ Consensus mechanisms, regardless of their specific algorithm, primarily focus on
 
 ### MPC is not Consensus
 
-Multi-Party Computation (MPC) has gained significant attention in recent years, particularly due to its applications in MPC wallets and Threshold Signature Schemes (TSS) for multi-signing. While Verifiable Random Functions (VRF), especially it’s implementation with BLS (Boneh-Lynn-Shacham), are widely utilized in Proof-of-Stake (PoS) blockchain networks [5,6], it's important to note that VRF is merely one component within the broader consensus mechanism and plays a relatively minor role in the overall process.
+Multi-Party Computation (MPC) has gained significant attention in recent years, particularly due to its applications in MPC wallets and Threshold Signature Schemes (TSS) for multi-signing. While Verifiable Random Functions (VRF), especially it's implementation with BLS (Boneh-Lynn-Shacham), are widely utilized in Proof-of-Stake (PoS) blockchain networks [5,6], it's important to note that VRF is merely one component within the broader consensus mechanism and plays a relatively minor role in the overall process.
 
 It's crucial to understand that MPC encompasses a much broader range of computational technologies than just TSS and VRF. In essence, MPC refers to a comprehensive secure multi-party computing framework designed to maintain accuracy, ensure security, and protect privacy in distributed computations [7]. This framework extends far beyond the specific applications of TSS and VRF, offering a wealth of possibilities for secure, collaborative computation across multiple parties.
 
@@ -55,6 +55,8 @@ Efficiency, another key objective, is intrinsically linked to the performance de
 Scalability, the third key goal, emphasizes the system's adaptability and extensibility. It enables seamless support for both small-scale operations and large, complex applications [22,23]. This scalability spans from simple point-based systems to intricate, data-intensive applications like search engines, another significant challenge for current decentralized applications.
 
 ## Fundamentals of UCL
+
+This section provides a high-level overview of the Universal Consensus Layer (UCL). A comprehensive and detailed explanation of the algorithms and mechanisms underlying UCL will be presented in a separate, dedicated paper.
 
 ### Native Executor
 
