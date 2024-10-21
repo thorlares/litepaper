@@ -106,7 +106,7 @@ To address this limitation, we introduce the core concept of SCC: Proof of Corre
 
 Two core technologies are at play here. The first is accountable settlement signing, an enhancement of the threshold signature scheme with accountability. This ensures settlers sign only correct execution results, with offending settlers facing punishment in cases of double signing or misbehavior. The second is verifiable randomized settler subsetting, which not only boosts the efficiency of PoCE but also ensures parallelism and security. The result of subsetting is random and unpredictable, providing protection against 51% attacks.
 
-The figure below illustrates this PoCE concept, showing how it integrates PoS and MPC elements for efficient consensus, and demonstrates the dynamic subset election process for parallel settling.
+The figure below illustrates this PoCE concept, demonstrating how it works and showcasing the dynamic subset election process for parallel settling.
 
 <figure><img src=".gitbook/assets/ucl/poce.svg"></figure>
 
