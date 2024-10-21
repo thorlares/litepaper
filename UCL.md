@@ -1,4 +1,8 @@
-# MPC based UCL(Universal Consensus Layer)
+# MPC based UCL
+
+## Abstraction
+
+In this paper, we present the MPC-based Universal Consensus Layer (UCL), a novel approach to blockchain technology that integrates Multi-Party Computation (MPC) with consensus mechanisms. UCL aims to overcome limitations in current blockchain systems by enabling complex, scalable computations while preserving decentralization and security. By introducing innovative concepts such as Proof of Correct Execution (PoCE), UCL offers a framework that combines accuracy, efficiency, and scalability, potentially revolutionizing the landscape of decentralized applications and blockchain-based solutions.
 
 ## Background
 
