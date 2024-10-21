@@ -100,17 +100,23 @@ Settlers receive incentives in the form of settling rewards, promoting active en
 
 ### Proof of Correct Execution
 
-As detailed in the executor section, all execution results are accompanied by a zkSNARK proof, a cryptographic method that has been demonstrated to be both practical and efficient in various applications [25,26]. However, while zkSNARK proofs provide a robust foundation for verifying computational integrity, they alone are insufficient to fully construct the Self-Custody Consensus (SCC) system we envision.
+As outlined in the executor section, all execution results are accompanied by a zkSNARK proof—a cryptographic method proven to be both practical and efficient in various applications [25,26]. While zkSNARK proofs provide a robust foundation for verifying computational integrity, they alone are insufficient to fully construct the Self-Custody Consensus (SCC) system we envision.
 
-To address this, we introduce the core concept of SCC: Proof of Correct Execution (PoCE). This innovative approach represents a novel kind of Proof of X (PoX) consensus mechanism, ingeniously combining elements from Proof of Stake (PoS) and Multi-Party Computation (MPC). By leveraging the strengths of both these established paradigms, PoCE aims to create a more comprehensive and secure consensus framework.
+To address this limitation, we introduce the core concept of SCC: Proof of Correct Execution (PoCE). This innovative approach represents a novel kind of Proof of X (PoX) consensus mechanism, ingeniously combining elements from Proof of Stake (PoS) and Multi-Party Computation (MPC). By leveraging the strengths of both these established paradigms, PoCE aims to create a more comprehensive and secure consensus framework.
 
-A key feature of our system is the implementation of accountable custody commitments for Settlers. This mechanism ensures a high level of accountability and integrity within the network. In the event that a Settler signs two conflicting results, a situation that could potentially compromise the system's consistency, they will face punitive measures. This deterrent helps maintain the overall reliability and trustworthiness of the consensus process.
-
-To enhance the efficiency of our system and address limitations inherent in threshold signing, we've implemented a dynamic election process. This process involves the formation of subsets of Settlers, which are tasked with handling settling requests in parallel. This parallel processing capability significantly accelerates the settling process. The election and formation of these subsets are facilitated through the use of Boneh-Lynn-Shacham (BLS) signatures, a cryptographic scheme that has been proven to function as a robust Verifiable Random Function (VRF) [27,28]. This approach not only improves the system's scalability but also ensures a fair and unpredictable selection process, further enhancing the security and decentralization of our consensus mechanism.
+Two core technologies are at play here. The first is accountable settlement signing, an enhancement of the threshold signature scheme with accountability. This ensures settlers sign only correct execution results, with offending settlers facing punishment in cases of double signing or misbehavior. The second is verifiable randomized settler subsetting, which not only boosts the efficiency of PoCE but also ensures parallelism and security. The result of subsetting is random and unpredictable, providing protection against 51% attacks.
 
 The figure below illustrates this PoCE concept, showing how it integrates PoS and MPC elements for efficient consensus, and demonstrates the dynamic subset election process for parallel settling.
 
 <figure><img src=".gitbook/assets/ucl/poce.svg"></figure>
+
+#### Accountable Settlement Signing
+
+First of all, all execution results are signed with an accountable custody commitment created by the settler. This forms the core of PoCE, ensuring a high level of accountability and integrity within the network. If a settler signs two conflicting results—a situation that could potentially compromise the system's consistency—they face punitive measures. This deterrent helps maintain the overall reliability and trustworthiness of the consensus process.
+
+#### Verifiable Settler Subsetting
+
+To enhance the efficiency and address limitations inherent in threshold signing, we've implemented a dynamic election process. This process involves the formation of subsets of Settlers, which are tasked with handling settling requests in parallel. This parallel processing capability significantly accelerates the settling process. The election and formation of these subsets are facilitated through the use of Boneh-Lynn-Shacham (BLS) signatures, a cryptographic scheme that has been proven to function as a robust Verifiable Random Function (VRF) [27,28]. This approach not only improves the system's scalability but also ensures a fair and unpredictable selection process, further enhancing the security and decentralization of our consensus mechanism.
 
 ### Hybrid Computation
 
